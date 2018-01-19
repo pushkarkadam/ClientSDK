@@ -23,7 +23,7 @@
                     </div>
                     <div class="form-group" id="iframeForm">
                     </div>
-                    <input type="hidden" id="payment_source" name="payment_source">
+                    <input type="hidden" id="payment_source" name="payment_source" />
                 </form>
             </div>
         </div>
@@ -57,7 +57,9 @@
  
 			}
 		</script>
-
+		<form action= "form.php" method="post">
+			token: <input type = "text" name="token" />
+		</form>
 
     </body>
 </html>
