@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Frame</title>
+
+
+</head>
+<body>
+	<iframe   src="https://widget-sandbox.paydock.com/remote-action?public_key=f4a3c72bb6bbccb3f612c30ac9496fbb16d2caec&configuration_token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwcmVkZWZpbmVkX2ZpZWxkcyI6eyJnYXRld2F5X2lkIjoiNWE0YzU4MjgxZTU2ZWYyMzlmYTE3N2IxIiwidHlwZSI6ImNhcmQifSwiZGVmaW5lZF9mb3JtX2ZpZWxkcyI6W10sImFsbG93ZWRfcmVzcG9uc2VfZGF0YSI6eyJ1cmwiOlsicGF5bWVudF9zb3VyY2UiXSwiZXZlbnQiOlsicGF5bWVudF9zb3VyY2UiXX0sInB1cnBvc2UiOiJwYXltZW50X3NvdXJjZSIsIndlYmhvb2tfZGVzdGluYXRpb24iOiIiLCJzdWNjZXNzX3JlZGlyZWN0X3VybCI6IiIsImVycm9yX3JlZGlyZWN0X3VybCI6IiIsImxhYmVsIjoiIiwibWV0YSI6e30sImlhdCI6MTUxNDk1MzA3NX0.GKFrBSkPp_SfnNuIiKedSqK60WsUeCbHdZD6ZMbiCEI&title=Bambora&fields_validation=true&supported_card_types=visa,mastercard,amex"> 
+    id=“cart” style=“height:1000px” width=“100%” frameBorder=“0”}</iframe>
+	
+    <script>
+        var window;
+	if (window.addEventListener) {
+    	window.addEventListener("message", listener);
+	} else {
+    	window.attachEvent("onmessage", listener);
+}
+
+function listener(event) {
+    var obj = JSON.parse(event.data);
+    var token = obj.payment_source;
+    console.log('Token = ', token);
+}
+</script>
+
+</body>
+</html>

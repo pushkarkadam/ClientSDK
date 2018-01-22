@@ -35,7 +35,7 @@
             widget.onFinishInsert('#payment_source', 'payment_source');
 
             widget.on('finish', function (data) {
-                 document.forms[0].submit();
+                 //document.forms[0].submit();
             });
 
             widget.load();
@@ -57,9 +57,6 @@
  
 			}
 		</script>
-		<form action= "form.php" method="post">
-			token: <input type = "text" name="token" />
-		</form>
 
     </body>
 </html>
